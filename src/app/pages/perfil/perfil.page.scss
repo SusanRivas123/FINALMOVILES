@@ -1,0 +1,181 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+ion-toolbar {
+  --background: #f1f5f8;
+}
+
+ion-content:not(#editProfile):not(.cropImage) {
+  --background: linear-gradient(
+    90deg,
+    rgba(43, 90, 148, 1) 0%,
+    rgba(45, 112, 229, 1) 35%,
+    rgba(45, 112, 229, 1) 100%
+  );
+  ion-item:not(.editProfile) {
+    --background: #f1f5f8;
+    border-radius: 0 0 28px 28px;
+    .hero {
+      background: #f1f5f8;
+      padding: 4px 10px 20px 10px;
+      margin: 0 auto;
+      ion-grid {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        ion-card {
+          width: 100%;
+          box-shadow: none;
+          border-radius: 14px;
+          padding: 5px;
+          background: rgba(255, 255, 255, 0.8);
+          height: 8rem;
+          margin: 4rem auto auto auto;
+          ion-card-title {
+            font-weight: 900;
+            font-size: 0.8rem;
+          }
+        }
+        .profile-image {
+          ion-icon {
+            z-index: 2;
+            position: absolute;
+            right: 3%;
+            top: 71%;
+            margin: auto;
+            font-size: 2rem;
+            color: #f7d050;
+            --ionicon-stroke-width: 16px;
+          }
+          img {
+            // width: 80%;
+            border-radius: 50%;
+            height: 130px;
+          }
+        }
+      }
+    }
+  }
+
+  .container {
+    padding: 6px 20px;
+    ion-list {
+      background: transparent;
+      ion-list-header {
+        color: white;
+        font-size: 18px;
+      }
+      ion-item {
+        --background: transparent;
+        ion-label {
+          font-family: "Poppins", sans-serif;
+        }
+        .title {
+          color: white;
+          font-size: 0.7rem;
+        }
+        .userInfo {
+          color: white;
+          font-size: 10px;
+          font-weight: 700;
+        }
+        .userInfoNull {
+          color: #343539;
+          font-size: 0.7rem;
+          font-weight: 400;
+        }
+      }
+    }
+    .esChofer {
+      ion-list {
+        ion-list-header {
+          color: white;
+          font-size: 18px;
+        }
+        ion-item {
+          ion-range {
+            --bar-background: #f8df8b;
+            --bar-background-active: #f7d050;
+            --bar-height: 8px;
+            --bar-border-radius: 8px;
+            --knob-background: #ffffff;
+            --knob-size: 20px;
+            --pin-color: #fff;
+          }
+          ion-range::part(pin) {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #fffdfe;
+            color: #343539;
+
+            border-radius: 50%;
+
+            top: -20px;
+
+            min-width: 28px;
+            height: 28px;
+            transition: transform 120ms ease, background 120ms ease;
+          }
+        }
+        .moneyAdvice {
+          font-size: 0.6rem;
+          text-align: center !important;
+          color: #c0c1c2;
+        }
+      }
+    }
+  }
+}
+ion-modal:not(.cropImage) {
+  ion-title {
+    font-size: 0.8rem;
+  }
+  .form-input {
+    ion-note {
+      font-size: 10px;
+      color: #eb4c61;
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      text-align: center;
+    }
+  }
+}
+
+.cropImage {
+  ion-toolbar {
+    --background: #1d1b26;
+    --color: #fffdfe;
+    ion-title{
+      font-size: 0.9rem;
+    }
+  }
+  ion-content {
+    --background: #1d1b26;
+    ion-button {
+      font-size: 0.5rem;
+    }
+    image-cropper {
+      --cropper-outline-color: rgba(0, 0, 0, 0.642);
+      --cropper-overlay-color: var(--ion-background-color);
+    }
+  }
+}
+
+@media (min-width: 760px) {
+  .cropImage {
+    ion-toolbar {
+      ion-title{
+        font-size: 1.5rem;
+        text-align: center;
+      }
+    }
+    ion-content {
+      ion-button {
+        font-size: 1rem;
+      }
+
+    }
+  }
+}

@@ -1,0 +1,94 @@
+ion-content {
+  font-family: "Poppins", sans-serif;
+  --background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
+    url("/assets/signup.jpg") no-repeat center center / cover;
+}
+.login-section {
+  height: 100%;
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  position: relative;
+  border-top-left-radius: 46px;
+  border-top-right-radius: 46px;
+  /* Arriba | Derecha | Abajo | Izquierda */
+  margin: 50% auto auto auto;
+
+  .header {
+    margin-top: 5px;
+    h1 {
+      font-size: 1.6rem;
+      font-weight: bolder;
+      color: black;
+    }
+    p {
+      margin-top: 20px;
+      font-size: 0.8rem;
+      color: #7b7b7b;
+    }
+  }
+  .login-form {
+    .form-input {
+      position: relative;
+      margin-bottom: 5px;
+      ion-item::part(native) {
+        padding-left: 0;
+      }
+      ion-icon {
+        position: absolute;
+        top: 37px;
+        z-index: 2;
+        font-size: 1.2rem;
+        left: 5px;
+      }
+      ion-item {
+        ion-label {
+          position: absolute;
+          margin-left: 35px;
+          font-weight: bolder;
+          font-size: 0.6rem;
+          top: 3px;
+          font-family: "Poppins", sans-serif;
+        }
+        ion-input {
+          font-size: 0.9rem;
+          --padding-start: 36px;
+          --padding-top: 36px;
+          color: #7b7b7b;
+        }
+      }
+      ion-note{
+        font-size: 12px;
+        color: #EB4C61;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+      }
+    }
+  }
+  .action-buttons {
+    text-align: center;
+    .signup-button {
+      --background: #f9b801;
+      width: 100%;
+      font-weight: bold;
+    }
+    .login-button {
+      margin-top: 15px;
+      font-size: 0.8rem;
+      color: #7b7b7b;
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+    }
+  }
+}
+
+@media (min-width: 760px) {
+  .login-section{
+    height: 80%;
+    position: fixed;
+    margin: auto;
+  }
+}

@@ -1,0 +1,28 @@
+
+ion-content{
+  ion-toolbar {
+    --background-color: transparent;
+    --ion-color-base: transparent;
+    ion-searchbar{
+      --background: transparent;
+      --border-radius: 50px;
+      --box-shadow: 5px 10px 8px #888888;
+      // margin-top: 50px;
+      // width: 50vh;
+      margin: 50px 0 auto;
+    }
+  }
+}
+
+#map{
+  width: 100%;
+  height: 100%;
+}
+
+#indicators {
+  padding: 16px;
+  height: 50%;
+  width: 100%;
+  overflow-y: auto;
+  display: block;
+}

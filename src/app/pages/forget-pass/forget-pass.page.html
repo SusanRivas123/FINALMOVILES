@@ -1,0 +1,29 @@
+<ion-content>
+  <div class="login-section ion-padding">
+    <div class="header ion-padding">
+      <h1>Recuperación de contraseña</h1>
+      <p>Se te enviará un email a tu correo para restablecer tu contraseña</p>
+    </div>
+    <form (ngSubmit)="onSubmit()" [formGroup]="credentials">
+      <div class="login-form">
+        <div class="form-input">
+          <ion-icon name="mail-outline"></ion-icon>
+          <ion-item>
+            <ion-label position="floating">EMAIL</ion-label>
+            <ion-input type="email" formControlName="email"></ion-input>
+          </ion-item>
+          <ion-note slot="error" *ngIf="(email.dirty || email.touched) && email.errors" color="danger">El email es inválido</ion-note>
+        </div>
+      </div>
+      <div class="action-buttons ion-padding">
+        <ion-button class="forgetPassButton" mode="ios" type="submit" [disabled]="!credentials.valid">
+          Enviar email
+        </ion-button>
+        <ion-button class="login-button" fill="clear" routerLink="/login" mode="ios">
+          Volver al login
+        </ion-button>
+      </div>
+    </form>
+  </div>
+
+</ion-content>
